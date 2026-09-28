@@ -2,7 +2,7 @@
 
 > 一句话定位：把"公开渠道散落的产品页、研报、政策文件、招投标公告"，做成一张**可复现、可质疑、可更新**的专网通信厂商能力矩阵，并输出面向产品规划与售前打单的结论。
 
-面向岗位：**产品行销 / 解决方案 / 市场技术研究**（专网通信行业）。
+适用场景：专网通信行业的竞品研究、产品定位与方案支撑。
 
 ---
 
@@ -67,7 +67,19 @@ python -m unittest discover -s tests -t . -v          # 16 个单元测试
 单元测试: 16 passed
 ```
 
-## 6. 已知局限（刻意写出来，别装完整）
+### 运行截图
+
+以下为本机实际运行的输出（原图见 `assets/screenshots/`）：
+
+| 归档与质量校验 | 能力矩阵与评分 |
+|---|---|
+| ![collect](assets/screenshots/01-run-collect.png) | ![score](assets/screenshots/02-run-score.png) |
+
+| 单元测试（16 passed） | 报告页 `report.html` |
+|---|---|
+| ![tests](assets/screenshots/03-unit-tests.png) | ![report](assets/screenshots/04-report-overview.png) |
+
+## 6. 已知局限
 
 1. 市场份额与营收数据来自公开研报/媒体，**口径与时点不一致**（如 Frost & Sullivan 2022 口径 vs 行业媒体 2026 口径），矩阵中保留"多口径并列 + 来源标注"，不做强行统一。
 2. 产品规格以官网公开信息为准，**缺失字段标 `unknown`**，不用推测值填充。
