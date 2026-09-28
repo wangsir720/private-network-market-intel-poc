@@ -1,0 +1,185 @@
+{
+  "as_of": "2026-09-28",
+  "schema_version": "1.0",
+  "rules": [
+    "字段缺失必须写 unknown，禁止用推测值填充",
+    "市场份额保留多来源、多口径，不强行统一",
+    "所有数值必须能回溯到 data/sources.md 中的某条来源"
+  ],
+  "vendors": [
+    {
+      "id": "hytera",
+      "name": "海能达 Hytera",
+      "country": "中国（深圳）",
+      "ticker": "002583.SZ",
+      "standards": ["TETRA", "DMR", "PDT"],
+      "narrowband": true,
+      "broadband": true,
+      "segments": ["公共安全", "应急管理", "轨道交通", "能源", "工商业"],
+      "ai_features": ["AI 专网战略（2026-04 合作伙伴峰会发布）", "基于大语言模型的智能通信终端", "AI 智能调度"],
+      "channel": "全球分销 + 渠道伙伴计划，渠道销售占比由约 30% 提升至约 50%",
+      "market_share": {
+        "cn_professional": "约 35.7%（国内专业市场第一）",
+        "cn_police_cluster": "PDT 警用数字集群国内份额超 50%",
+        "global": "约 13%（全球第二，招商证券口径）／约 11.4%（行业媒体口径）"
+      },
+      "facts": [
+        "PDT 标准核心起草单位、总体组组长",
+        "累计出货 PDT 终端 95 万部、PDT 基站 1 万个，累计承建 PDT 系统 178 套",
+        "370MHz PDT 应急专网主力供应商，参与『应急使命·2026』湖北演习通信保障",
+        "业务覆盖 120+ 国家和地区，服务超 1800 万行业客户"
+      ],
+      "risks": [
+        "与摩托罗拉的跨国专利纠纷导致 2023-2025 累计亏损超 41 亿元（公开媒体口径），2025-01 达成全球和解",
+        "海外资产出售与法务计提对短期财务表现有影响"
+      ],
+      "unknown": ["各型号终端的详细射频规格", "AI 终端的商用落地客户数"],
+      "sources": ["S1", "S2", "S3", "S4"]
+    },
+    {
+      "id": "motorola",
+      "name": "摩托罗拉系统 Motorola Solutions",
+      "country": "美国（伊利诺伊州）",
+      "ticker": "MSI",
+      "standards": ["TETRA", "P25"],
+      "narrowband": true,
+      "broadband": true,
+      "segments": ["公共安全", "政府", "交通", "能源"],
+      "ai_features": ["unknown（本 POC 未采集到可引用的公开 AI 能力口径）"],
+      "channel": "直销 + 系统集成商体系，高端市场品牌壁垒强",
+      "market_share": {
+        "global_professional": "约 40%（专用通信口径）",
+        "global_pmr": "约 58.5%（含专业级与政府级对讲机口径）",
+        "cn": "约 25%"
+      },
+      "facts": [
+        "在北美及欧洲公共安全市场占据主导地位",
+        "历史上在中国轨道交通数字集群市场中标占比高（2009 年 21 条线路中中标 20 条）"
+      ],
+      "risks": ["高端定位带来价格劣势，在国产化替代政策下承压"],
+      "unknown": ["中国区最新份额"],
+      "sources": ["S1", "S2", "S3"]
+    },
+    {
+      "id": "jvckenwood",
+      "name": "建伍 JVCKENWOOD",
+      "country": "日本",
+      "standards": ["DMR", "NXDN"],
+      "narrowband": true,
+      "broadband": false,
+      "segments": ["工业", "能源化工", "矿业", "商业"],
+      "ai_features": ["unknown"],
+      "channel": "经销体系为主，亚太高端商用市场基础稳固",
+      "market_share": {
+        "global": "约 10%",
+        "industrial_exproof": "工业级防爆对讲机全球约 23%"
+      },
+      "facts": ["以可靠性、耐用性与精细工艺著称，适用于防爆等高要求场景"],
+      "risks": ["宽带化与 AI 产品线公开信息少"],
+      "unknown": ["AI 与宽带产品规划"],
+      "sources": ["S1", "S3"]
+    },
+    {
+      "id": "airbus",
+      "name": "欧宇航 Airbus（Secure Land Communications）",
+      "country": "欧洲",
+      "standards": ["TETRA"],
+      "narrowband": true,
+      "broadband": true,
+      "segments": ["公共安全", "轨道交通", "政府"],
+      "ai_features": ["unknown"],
+      "channel": "面向欧洲政府与轨交客户的直销与联合体模式",
+      "market_share": {
+        "eu_tetra": "与摩托罗拉共同主导欧洲 TETRA 市场（地铁场景历史份额高）"
+      },
+      "facts": ["欧洲 TETRA 主力厂商之一"],
+      "risks": ["在中国市场受 PDT 标准替代影响"],
+      "unknown": ["具体份额数值"],
+      "sources": ["S3", "S4"]
+    },
+    {
+      "id": "tait",
+      "name": "Tait Communications",
+      "country": "新西兰",
+      "standards": ["P25", "DMR"],
+      "narrowband": true,
+      "broadband": false,
+      "segments": ["公共安全", "公用事业"],
+      "ai_features": ["unknown"],
+      "channel": "区域渠道为主",
+      "market_share": {"global": "区域型厂商，未见可引用份额口径"},
+      "facts": ["在公共安全与公用事业领域具备区域优势"],
+      "risks": ["规模有限"],
+      "unknown": ["份额"],
+      "sources": ["S1"]
+    },
+    {
+      "id": "kirisun",
+      "name": "科立讯 KIRISUN",
+      "country": "中国",
+      "standards": ["DMR", "PDT"],
+      "narrowband": true,
+      "broadband": "unknown",
+      "segments": ["工商业", "公共安全"],
+      "ai_features": ["unknown"],
+      "channel": "国内渠道与终端出货为主",
+      "market_share": {"cn": "国内品牌前列（未披露具体份额）"},
+      "facts": ["国内专业与商用市场活跃品牌"],
+      "risks": ["以价格竞争为主的低端赛道"],
+      "unknown": ["宽带与 AI 能力"],
+      "sources": ["S1"]
+    },
+    {
+      "id": "bfdx",
+      "name": "北峰 BFDX",
+      "country": "中国",
+      "standards": ["DMR", "PDT"],
+      "narrowband": true,
+      "broadband": "unknown",
+      "segments": ["工商业", "公共安全"],
+      "ai_features": ["unknown"],
+      "channel": "国内渠道下沉",
+      "market_share": {"cn": "国内品牌前列（未披露具体份额）"},
+      "facts": ["国内专业与商用市场活跃品牌"],
+      "risks": ["同质化竞争"],
+      "unknown": ["宽带与 AI 能力"],
+      "sources": ["S1"]
+    },
+    {
+      "id": "crsc",
+      "name": "中国通号（轨交 + 低空）",
+      "country": "中国",
+      "standards": ["5G-R", "6G 无蜂窝（研发中）"],
+      "narrowband": false,
+      "broadband": true,
+      "segments": ["轨道交通", "低空应急通信"],
+      "ai_features": ["低空管控体系化能力（公开表述）"],
+      "channel": "轨交基本盘 + 政企项目制",
+      "market_share": {"segment": "铁路通信信号基本盘，2026Q1 营收 64.95 亿元（公开报道）"},
+      "facts": [
+        "『轨交 + 低空』双赛道战略",
+        "与紫金山实验室合作研发 6G 无蜂窝通信系统",
+        "低空应急通信系统实测达成百公里级通联"
+      ],
+      "risks": ["属于生态新型参与者，对传统专网厂商构成潜在竞争"],
+      "unknown": ["专网终端产品线"],
+      "sources": ["S5", "S6"]
+    },
+    {
+      "id": "aoro",
+      "name": "遨游通讯 AORO",
+      "country": "中国（深圳）",
+      "standards": ["DMR", "5G", "卫星（天通/低轨/北斗）"],
+      "narrowband": true,
+      "broadband": true,
+      "segments": ["应急", "户外", "特种行业"],
+      "ai_features": ["unknown"],
+      "channel": "特种终端直销与行业渠道",
+      "market_share": {"note": "新兴厂商，未见可引用份额口径"},
+      "facts": ["与吉利时空道宇合作发布双卫星终端 AORO M5（天通 + 低轨 / 北斗短报文）"],
+      "risks": ["多模融合终端的成本与认证门槛"],
+      "unknown": ["出货规模"],
+      "sources": ["S5"]
+    }
+  ]
+}

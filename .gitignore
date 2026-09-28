@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# 生成的中间产物（可复现，不入库）
+data/collected.json
+data/extracted.json
+data/score.json

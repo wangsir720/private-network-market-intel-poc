@@ -1,0 +1,5 @@
+# 本项目运行时零第三方依赖（仅用 Python 标准库：json / csv / html / urllib / unittest）
+# 保留此文件是为了声明"可选增强项"，并避免后续误装重型依赖。
+
+# --- 可选：仅在需要时启用 ---
+# openai>=1.40.0     # 若希望用官方 SDK 替代标准库 urllib 调用（当前 extract.py 用 urllib 即可）
